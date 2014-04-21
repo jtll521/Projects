@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slideview_backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/host_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/host_image"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_margin="8dip"
+                android:src="@drawable/head_default" />
+
+            <TextView
+                android:id="@+id/host_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_toRightOf="@+id/host_image"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="主人"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/host_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/host_name"
+                android:layout_alignRight="@+id/host_name"
+                android:layout_below="@+id/host_name"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="人们不会在意影子的存在"
+                android:textColor="#70000000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/slide_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:listSelector="#00000000"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:scrollbars="none" >
+        </ListView>
+        <!-- 可以为listview 动态添加一个最底部的下划线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/slide_listview"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/sidebar_dividing_line" />
+    </LinearLayout>
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/slideview_ugc_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            layout="@layout/ugc_menu_layout2" />
+    </LinearLayout>
+    
+
+</LinearLayout>
